@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include <set>
 
 using namespace std;
@@ -6,16 +7,15 @@ using namespace std;
 int main() {
     string s;
     set<string> str_set;
-    string part_str;
     
     cin >> s;
-
-    for (int i = 0; i < s.size(); i++) {
-        for (int j = i; j < s.size(); j++) {
-            part_str += s[j];
-            str_set.insert(part_str);
+    
+    for (int i=0; i<s.size(); i++)
+    {
+        for (int j=0; j<s.size(); j++){
+            str_set.insert(s.substr(i, j));
         }
-        part_str = "";
     }
+
     cout << str_set.size();
 }
