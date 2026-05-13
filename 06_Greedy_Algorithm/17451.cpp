@@ -6,13 +6,13 @@ using namespace std;
 int main(){
     int n = 0;
     cin >> n;
-    vector<int> A(n, 0);
+    vector<long long> A(n, 0);
 
     for(int i = 0; i < n; i++){
         cin >> A[i];
     }
 
-    int answer = A[n-1];
+    long long answer = A[n-1];
     for(int i=n-2; i>=0; i--){
         if(answer < A[i]){
             answer = A[i];
